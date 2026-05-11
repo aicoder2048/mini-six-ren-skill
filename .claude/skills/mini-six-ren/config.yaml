@@ -20,7 +20,7 @@
 # ==========================================
 
 # --- DeepSeek (国产之光) ---
-# model: deepseek:deepseek-chat          # Flash/Light: Highly efficient, agent-optimized
+# model: deepseek:deepseek-v4-pro        # Flash/Light: Highly efficient, agent-optimized
 # model: deepseek:deepseek-r1            # Pro/Heavy: Premier reasoning (OpenAI o1 level)
 
 # --- Alibaba Qwen (通义千问) ---

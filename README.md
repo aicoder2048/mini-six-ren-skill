@@ -191,8 +191,9 @@ uv run scripts/xiaoliu.py --datetime "2025-07-15 10:30" --question "面试能成
 uv run scripts/xiaoliu.py --chars "天地人" --question "感情运势" --format json
 ```
 
-- 内置约 150+ 常用汉字笔画表
-- 不在表中的字使用 Unicode 编码取模近似
+- 笔画数据基于 [Unicode Unihan 数据库](https://www.unicode.org/charts/unihan.html)（`kTotalStrokes` 字段），覆盖 102K+ CJK 字符的真实笔画
+- 数据预编译为 `scripts/strokes.json`（~960 KB），运行时懒加载，无网络依赖
+- 极罕见字（非 CJK 或 Unihan 数据缺失）回落到 Unicode 码点取模兜底，确保不报错
 
 ### 当前时间模式 `--now`
 
